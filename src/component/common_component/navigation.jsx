@@ -1,9 +1,16 @@
 import React from "react";
 import logo from "../../assets/logo.svg";
 import menu from "../../assets/menu.svg";
+import { Link } from "react-router";
 
 const Navigation = () => {
-  const li_item = ["Home", "Service", "Contact", "Blog", "Product", "AboutUs"];
+  const li_item = [
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/Services" },
+    { name: "Contact", path: "/contact" },
+    { name: "Blog", path: "/blog" },
+    { name: "About", path: "/about" },
+  ];
   const li_style = "text-slate-800 font-xxs text-sm/[17px] font-sans";
 
   return (
@@ -13,13 +20,13 @@ const Navigation = () => {
         {li_item.map((item, index) => {
           return (
             <li key={index} className={li_style}>
-              {item}
+              <Link to={item.path}>{item.name}</Link>
             </li>
           );
         })}
       </ul>
       <button className=" hidden md:h-8  md:w-[80px] md:text-sm md:flex justify-center items-center  bg-[#279EFF] rounded-3xl text-white ">
-        Login
+        <Link to='/login'> Login </Link>
       </button>
       <img src={menu} alt="" className="mr-2 md:hidden " />
     </div>

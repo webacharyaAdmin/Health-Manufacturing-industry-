@@ -26,12 +26,12 @@ const Blog = () => {
       <Navigation />
 
       {/* main banner them */}
-      <div className="w-full p-5">
-        <div className="">
-          <h1 className="my-10 text-[1.9rem] font-medium w-fit pr-5">
+      <div className="w-full p-5 flex flex-col ">
+        <div className="self-center md:m-auto md:my-20">
+          <h1 className="my-10 text-[1.9rem] font-medium w-fit pr-5 md:text-[2.5rem] md:w-[45rem] md:text-center md:my-2">
             Insights That Inspire: Explore, Learn, and Elevate Your Knowledge
           </h1>
-          <p className="text-[0.9rem] text-gray-500 w-fit pr-40">
+          <p className="text-[0.9rem] text-gray-500 w-fit pr-40 md:pr-0 md:w-[40rem] md:text-[1.1rem] md:text-center">
             Dive into our curated collection of articles, tips, and stories
             designed to inform, inspire, and keep you ahead in every aspect of
             life.
@@ -40,23 +40,29 @@ const Blog = () => {
       </div>
 
       {/* second section  */}
-      <div className="p-5 w-full flex flex-col justify-center h-fit md:justify-start gap-5 md:flex-row">
-        <div className="bg-white shadow-xl rounded-2xl  w-full h-fit p-2 md:flex md:w-[70vw]">
-          <img src={Blog1} alt="" className="w-full h-[18rem]" />
+      <div className="p-5 w-full flex flex-col justify-center h-fit md:justify-start gap-5 md:flex-row ">
+        <div className="bg-white shadow-xl rounded-2xl  w-full h-fit p-2 md:flex md:w-[70vw] md:gap-5">
+          <img
+            src={Blog1}
+            alt=""
+            className="w-full h-[18rem] md:bg-center md:bg-cover md:h-[20rem]"
+          />
           <div className="p-4 my-6   flex flex-col gap-6">
-            <div className="flex flex-col gap-2">
-              <label className="text-[1.5rem]">Ux review Perception </label>
-              <p className="text-xs">
+            <div className="flex flex-col ">
+              <label className="text-[1.5rem] md:text-[2rem]">
+                Ux review Perception{" "}
+              </label>
+              <p className="text-xs md:text-base">
                 Our products are meticulously packaged using industry-standard
                 materials and techniques. This ensures that your items are
                 well-protected during transit.{" "}
               </p>
             </div>
             <div className="flex flex-col gap-2">
-              <label className="text-[1.5rem]  ">
+              <label className="text-[1.5rem] md:text-[1.8rem] ">
                 Total review related eport{" "}
               </label>
-              <p className="text-xs">
+              <p className="text-xs md:text-base">
                 Our products are meticulously packaged using industry-standard
                 materials and techniques. This ensures that your items are
                 well-protected during transit.{" "}
@@ -64,17 +70,22 @@ const Blog = () => {
             </div>
           </div>
         </div>
-        <div className="bg-white shadow-xl rounded-2xl  w-full h-fit p-5 md:flex md:w-[40vw]">
-          <div className="flex px-2 gap-4">
-            <img src={person2} alt="" />
+        <div className="bg-white shadow-xl rounded-2xl  w-full h-fit p-5  md:w-[40vw] md:h-[22.5rem] md:p-6">
+          <div className="flex px-2 gap-4 md:gap-6 md:items-center">
+            <img src={person2} alt="" className="md:h-16 md:w-16 " />
             <div className="">
-              <label htmlFor="" className="text=[0.8rem] font-medium">
+              <label
+                htmlFor=""
+                className="text-[0.8rem] font-medium text-w md:text-[2rem]"
+              >
                 Dr marko Yoon
               </label>
-              <p className="text-[0.8rem]">micro chief officer</p>
+              <p className="text-[0.8rem] md:text-[1.5rem]">
+                micro chief officer
+              </p>
             </div>
           </div>
-          <p className="text-[0.6rem] mt-6">
+          <p className="text-[0.6rem] mt-6 md:text-[1rem]">
             Our products are meticulously packaged using industry-standard
             materials and techniques. This ensures that your items are
             well-protected during transit Our products are meticulously packaged
@@ -85,12 +96,12 @@ const Blog = () => {
       </div>
 
       {/* healthcare seminar  */}
-      <div className="w-full px-5 mt-10">
-        <div className="flex flex-col gap-10">
-          <label className="text-[2rem] leading-8  font-medium">
+      <div className="w-fit px-5 mt-10 ">
+        <div className="flex flex-col gap-10 md:flex ">
+          <label className="text-[2rem] leading-8  font-medium md:w-[20rem]">
             Heath Care <br /> Seminar 2024
           </label>
-          <p className="text-base pr-5">
+          <p className="text-base pr-5 md:">
             Our products are meticulously packaged using industry-standard
             materials and techniques. This ensures that your items are
             well-protected during transit Our products are meticulously packaged
@@ -194,7 +205,7 @@ const Blog = () => {
           <Last {...fun} />
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
