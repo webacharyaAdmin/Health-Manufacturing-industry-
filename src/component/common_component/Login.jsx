@@ -9,7 +9,7 @@ const Login = () => {
         <img
           src={banner}
           alt="Login"
-          className="max-w-full h-auto rounded-lg "
+          className="hidden max-w-full h-auto rounded-lg md:block "
         />
       </div>
       <div className="w-full md:w-1/2 flex flex-col justify-center items-center rounded-lg  p-8 text-center ">

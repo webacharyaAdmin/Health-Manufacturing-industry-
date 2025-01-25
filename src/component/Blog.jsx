@@ -96,7 +96,7 @@ const Blog = () => {
       </div>
 
       {/* healthcare seminar  */}
-      <div className="w-fit px-5 mt-10 ">
+      <div className="w-fit px-5 mt-10 md:mt-0 ">
         <div className="flex flex-col gap-10 md:flex ">
           <label className="text-[2rem] leading-8  font-medium md:w-[20rem]">
             Heath Care <br /> Seminar 2024
@@ -114,9 +114,9 @@ const Blog = () => {
       </div>
 
       {/* 2section  */}
-      <div>
-        <div className="m-5">
-          <img src={Blog2} alt="" />
+      <div className="md:flex md:m-15 md:justify-center md:items-center md:h-[40rem]">
+        <div className="mx-5 my-5">
+          <img src={Blog2} alt="md:h-[15rem] md:w-[20rem]" />
         </div>
         <div className="space-y-5">
           <Box {...Boost} />
@@ -125,13 +125,13 @@ const Blog = () => {
         </div>
       </div>
 
-      <div className="w-full p-5 space-y-16 ">
+      <div className="w-full p-5 space-y-16 md:flex items-center md:px-16">
         <div className="w-full flex gap-5 rounded-xl">
           <div
-            className="w-full h-[20rem] rounded-2xl bg-cover bg-center"
+            className="w-full h-[20rem] rounded-2xl bg-cover bg-center md:w-[20rem]"
             style={{ backgroundImage: `url(${topic1})` }}
           ></div>
-          <div className="w-full rounded-2xl h-[20rem]  shadow-xl  p-5  space-y-9">
+          <div className="w-full rounded-2xl h-[20rem]  shadow-xl  p-5  space-y-9 md:w-[15rem]">
             <div className="flex flex-col">
               <label className="text-[3rem] ">02</label>
               <label className="font-medium">
@@ -145,8 +145,8 @@ const Blog = () => {
           </div>
         </div>
 
-        <div className="mt-16 ">
-          <div className="text-[1.5rem] font-semibold">
+        <div className="mt-16 md:mt-0 md:px-10 self-start">
+          <div className="text-[1.5rem] font-semibold  ">
             <label className="">Topics</label>
             <p>Specialized Healthcare</p>
           </div>
@@ -183,14 +183,15 @@ const Blog = () => {
 
       {/* last section */}
 
-      <div className="p-5">
-        <div className="w-full h-fit">
-          <labe className="text-2xl font-semibold">
+      <div className="p-5 md:mx-10 md:my-16">
+        <div className="w-full h-fit ">
+          <labe className="text-2xl font-semibold  md:text-[2rem] ">
             Topics: Mental Health, Diabetes Management, Heart Health, or Cancer
             Prevention.
           </labe>
+          <div className='md:flex'>
           <div
-            className="w-full h-[20rem] bg-cover bg-center rounded-xl flex flex-col p-5 mt-10 "
+            className="w-full h-[20rem] bg-cover bg-center rounded-xl flex flex-col p-5 mt-10 md:h-[30rem]"
             style={{ backgroundImage: `url(${lastblog})` }}
           >
             <label className="text-[1rem] text-white ">
@@ -200,10 +201,11 @@ const Blog = () => {
               Technology and Innovation Programs
             </label>
           </div>
+          <div className='md:mt-10'>
           <Last {...fun} />
           <Last {...fun} />
-          <Last {...fun} />
-        </div>
+          <Last {...fun} /></div>
+        </div></div>
       </div>
       <Footer />
     </div>

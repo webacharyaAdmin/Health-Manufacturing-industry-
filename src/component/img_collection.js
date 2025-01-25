@@ -7,12 +7,11 @@ import img6 from "../assets/product8.png";
 import img7 from "../assets/product9.png";
 
 export const Imagex = [
-  { img1: "../assets/product2.png", id: 1 },
-  { img2: img2, id: 1 },
-  { img3: img3, id: 1 },
-  { img4: img4, id: 2 },
-  { img5: img5, id: 2 },
-  { img6: img6, id: 2 },
-  { img7: img7, id: 3 },
-  ,
+   img,
+   img2,
+   img3,
+   img4,
+   img5,
+   img6,
+   img7,
 ];

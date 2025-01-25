@@ -34,6 +34,7 @@ const Products = () => {
           <div className="hidden w-full md:w-[20rem] md:h-[40rem] p-4 md:block md:p-5 md:mt-10  overflow-y-scroll  ">
             <div>
               <h2 className="text-xl font-bold mb-2">Filter</h2>
+
               <p className="mb-4">Select filter according to your need</p>
             </div>
             <div className="w-full space-y-10 mt-20 flex flex-col items-center justify-center ">
@@ -120,7 +121,7 @@ const Products = () => {
                     key={index}
                     className="flex flex-col items-center justify-center w-full h-full md:w-[19rem] md:h-[19rem] md:flex-wrap"
                   >
-                    <img src={img.img6} alt="" className="h-full w-full mt-5" />
+                    <img src={img} alt="" className="h-full w-full mt-5" />
                   </div>
                 );
               })}

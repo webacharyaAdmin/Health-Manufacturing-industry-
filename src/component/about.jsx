@@ -61,35 +61,39 @@ const About  = () => {
         </div>
       </div>
       <div>
-        <div className="m-10 space-y-10">
+        <div className=" m-10 space-y-10 md:flex md:gap-20 md:m-16  md:justify-center">
           <img
             src={banner}
             alt=""
-            className="w-[20rem] h-[20rem] hidden md:flex"
+            className="w-[20rem] h-[20rem] hidden md:flex md:h-[28rem] md:w-[28rem] md:rounded-2xl"
           />
-          <h1 className="text-4xl font-semibold">Our Mission</h1>
-          <p className="flex ">
-            To be the preferred partner for health manufacturing, recognized
-            globally for quality, innovation, and trust.. I specialize in
-            crafting unique visual identities and compelling brand stories. To
-            be the preferred partner for health manufacturing, recognized
-            globally for quality, innovation, and trust.. I specialize in
-            crafting unique visual identities and compelling brand stories.
-          </p>
-          <button
-            className="w-fit p-3 rounded-md font-medium bg-[#279EFF] text-white text-xs
+          <div className="md:space-y-10">
+            <h1 className="text-4xl font-semibold md:text-[3rem] ">
+              Our Mission
+            </h1>
+            <p className="flex md:text-[1.3rem] md:w-[36rem]">
+              To be the preferred partner for health manufacturing, recognized
+              globally for quality, innovation, and trust.. I specialize in
+              crafting unique visual identities and compelling brand stories. To
+              be the preferred partner for health manufacturing, recognized
+              globally for quality, innovation, and trust.. I specialize in
+              crafting unique visual identities and compelling brand stories.
+            </p>
+            <button
+              className="w-fit p-3 rounded-md font-medium bg-[#279EFF] text-white text-xs md:text-[1rem]
           "
-          >
-            Connect for more{" "}
-          </button>
+            >
+              Connect for more{" "}
+            </button>
+          </div>
         </div>
       </div>
 
       <div className="m-8 ">
-        <label className="text-3xl font-semibold w-60 ">
+        <label className="text-3xl font-semibold w-60 ml-28">
           What Service We Provide
         </label>
-        <div className="p-5 md:flex flex-wrap ">
+        <div className="p-5 md:flex flex-wrap md:justify-center md:gap-5">
           <div className="flex  gap-5 item-center justify-center">
             <Card {...card_value1} />
             <Card {...card_value2} />
@@ -112,27 +116,29 @@ const About  = () => {
       {/* our vision  */}
 
       <div className="w-full h-fit p-5 ">
-        <div className=" w-full md:flex md:justify-center md:item-center space-y-8 justify-center ">
-          <img src={vision} alt="" className="h-[15rem]  mb-6" />
-          <label className="text-4xl font-medium ">Our vision</label>
-          <p className="flex text-base">
-            To be the preferred partner for health manufacturing, recognized
-            globally for quality, innovation, and trust .To be the preferred
-            partner for health manufacturing
-          </p>
-          <button
-            className="w-fit p-3 rounded-md font-medium bg-[#0f0f0f] text-white text-xs
+        <div className=" w-full md:justify-center md:item-center space-y-8 justify-center md:flex gap-20">
+          <img src={vision} alt="" className="h-[15rem]  mb-6 md:h-[25rem] " />
+          <div className=" space-y-10">
+            <label className="text-4xl font-medium ">Our vision</label>
+            <p className="flex text-base md:w-[30rem] md:text-xl">
+              To be the preferred partner for health manufacturing, recognized
+              globally for quality, innovation, and trust .To be the preferred
+              partner for health manufacturing
+            </p>
+            <button
+              className="w-fit p-3 rounded-md font-medium bg-[#0f0f0f] text-white text-xs
           "
-          >
-            Connect for more{" "}
-          </button>
+            >
+              Connect for more{" "}
+            </button>
+          </div>
         </div>
       </div>
 
       <div className="p-5">
-        <div className="w-[20rem] gap-3 flex md:flex-wrap overflow-x-scroll md:w-full">
-          <div className="h-[15rem] w-[10rem] flex flex-col bg-[#F1F1F1] rounded-xl p-3">
-            <label className="text-3xl font-normal">
+        <div className="w-[20rem] gap-3 flex md:flex-wrap overflow-x-scroll md:w-full md:justify-center">
+          <div className="h-[15rem] w-[10rem] flex flex-col bg-[#F1F1F1] rounded-xl p-3 md:h-[20rem] md:w-[20rem]">
+            <label className="text-3xl font-normal md:text-[2.5rem]">
               Our <br />
               Team
             </label>
@@ -142,37 +148,34 @@ const About  = () => {
             </p>
           </div>
           <div
-            className="h-[15rem] w-[10rem] flex flex-col rounded-xl p-3 bg-cover bg-center"
+            className="h-[15rem] w-[10rem] flex flex-col rounded-xl p-3 bg-cover bg-center md:h-[20rem] md:w-[20rem]"
             style={{ backgroundImage: `url(${member1})` }}
           ></div>
           <div
-            className="h-[15rem] w-[10rem] flex flex-col rounded-xl p-3 bg-cover bg-center"
+            className="h-[15rem] w-[10rem] flex flex-col rounded-xl p-3 bg-cover bg-center md:h-[20rem] md:w-[20rem]"
             style={{ backgroundImage: `url(${member2})` }}
           ></div>
           <div
-            className="h-[15rem] w-[10rem] flex flex-col rounded-xl p-3 bg-cover bg-center"
+            className="h-[15rem] w-[10rem] flex flex-col rounded-xl p-3 bg-cover bg-center md:h-[20rem] md:w-[20rem]"
             style={{ backgroundImage: `url(${member3})` }}
           ></div>
           <div
-            className="h-[15rem] w-[10rem] flex flex-col rounded-xl p-3 bg-cover bg-center"
+            className="h-[15rem] w-[10rem] flex flex-col rounded-xl p-3 bg-cover bg-center md:h-[20rem] md:w-[20rem]"
             style={{ backgroundImage: `url(${member4})` }}
           ></div>
           <div
-            className="h-[15rem] w-[10rem] flex flex-col rounded-xl p-3 bg-cover bg-center"
+            className="h-[15rem] w-[10rem] flex flex-col rounded-xl p-3 bg-cover bg-center md:h-[20rem] md:w-[20rem]"
             style={{ backgroundImage: `url(${member2})` }}
           ></div>
           <div
-            className="h-[15rem] w-[10rem] flex flex-col rounded-xl p-3 bg-cover bg-center"
+            className="h-[15rem] w-[10rem] flex flex-col rounded-xl p-3 bg-cover bg-center md:h-[20rem] md:w-[20rem]"
             style={{ backgroundImage: `url(${member1})` }}
           ></div>
           <div
-            className="h-[15rem] w-[10rem] flex flex-col rounded-xl p-3 bg-cover bg-center"
+            className="h-[15rem] w-[10rem] flex flex-col rounded-xl p-3 bg-cover bg-center md:h-[20rem] md:w-[20rem]"
             style={{ backgroundImage: `url(${member4})` }}
           ></div>
-          <div
-            className="h-[15rem] w-[10rem] flex flex-col rounded-xl p-3 bg-cover bg-center"
-            style={{ backgroundImage: `url(${member3})` }}
-          ></div>
+          
         </div>
       </div>
 
@@ -208,7 +211,7 @@ const About  = () => {
           </p>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
