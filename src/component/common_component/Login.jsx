@@ -1,8 +1,29 @@
 import React from "react";
 import banner from "../../assets/login_banner.png";
-import google from '../../assets/Google.png'
+import google from "../../assets/Google.png";
+import { Link } from "react-router";
+import { useState } from "react";
+import { supabase } from "../../supabaseClient";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleLogin = async () => {
+    const {
+      data: { user },
+      error,
+    } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
+    if (error) {
+      console.error("Login error:", error.message);
+    } else {
+      console.log("Login successful:", user);
+    }
+  };
+
   return (
     <div className="flex flex-col  md:flex-row items-center justify-center min-h-screen bg-gray-100 p-4 ">
       <div className="w-full md:w-1/2 flex justify-center mb-6 md:mb-0">
@@ -28,6 +49,7 @@ const Login = () => {
               required
               className=" w-[30rem] border border-gray-300 rounded-3xl px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
               placeholder="UserName or email"
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="flex flex-col ">
@@ -38,6 +60,7 @@ const Login = () => {
               required
               className="w-[30rem] border border-gray-300 rounded-3xl px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
               placeholder="password"
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
           <div className="flex justify-between items-center gap-5">
@@ -45,11 +68,12 @@ const Login = () => {
               type="button"
               className="w-full bg-gray-300 hover:bg-gray-400 text-gray-800 font-medium py-2 px-4 rounded-3xl"
             >
-              Sign Up
+              <Link to="/signup">Sign Up</Link>
             </button>
             <button
               type="submit"
               className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-3xl"
+              onClick={handleLogin}
             >
               Sign In
             </button>

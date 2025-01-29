@@ -1,8 +1,25 @@
+
 import React from "react";
 import banner from "../../assets/signup.png";
 import google from '../../assets/Google.png'
+import { signUp } from "../../App";
+import { useState } from "react";
+
 
 const Signup = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSignUp = async () => {
+    const { user, error } = await signUp(email, password);
+    if (error) {
+      console.error("Signup error:", error.message);
+    } else {
+      console.log("Signup successful:", user);
+    }
+    };
+
+
   return (
     <div className="flex flex-col  md:flex-row items-center justify-center min-h-screen bg-gray-100 p-4 ">
       <div className="w-full md:w-[50rem] flex justify-center mb-6 md:mb-0">
@@ -10,6 +27,7 @@ const Signup = () => {
           src={banner}
           alt="Login"
           className="max-w-full h-auto rounded-lg "
+
         />
       </div>
       <div className="w-full md:w-1/2 flex flex-col justify-center items-center rounded-lg  p-8 text-center ">
@@ -28,6 +46,7 @@ const Signup = () => {
               required
               className=" w-[30rem] border border-gray-300 rounded-3xl px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
               placeholder="UserName "
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="flex flex-col ">
@@ -38,6 +57,7 @@ const Signup = () => {
               required
               className="w-full border border-gray-300 rounded-3xl px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
               placeholder="Email"
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
           <div className="flex flex-row justify-center items-center gap-5">
@@ -83,6 +103,7 @@ const Signup = () => {
             <button
               type="submit"
               className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-3xl"
+              onClick={handleSignUp}
             >
               Sign In
             </button>
@@ -93,7 +114,7 @@ const Signup = () => {
             type="button"
             className="w-full mt-4 bg-white hover:bg-stone-500 text-zinc-900 text-sm font-normal py-2 px-4 rounded-3xl shadow-md flex justify-center gap-4"
           >
-            <img src={google} alt="" />
+            <img src={google} alt=""  />
             Sign Up with Google
           </button>
 
