@@ -69,7 +69,7 @@ const Contact = () => {
       <div className="md:flex md:justify-center md:gap-64">
         <div className="mt-10 ">
           <div>
-            <label className="w-fit text-[1.5rem] font-semibold flex flex-center text-center items-center justify-center md:text-left md:text-[3rem] leading-tight">
+            <label className="w-full text-[1.5rem] font-semibold flex flex-center text-center items-center justify-center md:text-left md:text-[2.5rem] leading-tight md:justify-start">
               Need Help ? Get <br />
               in Touch
             </label>

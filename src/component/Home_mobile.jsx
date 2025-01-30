@@ -22,7 +22,7 @@
   import person from '../assets/person.png'
   import dot from '../assets/review_logo.png'
   import Footer from './common_component/footer'
-
+  
   const Home_mobile = () => {
     return (
       <div className=" md:overflow-hidden bg-[#F8FFF7] ">
@@ -37,10 +37,10 @@
           />
 
           <div className="flex flex-col ml-5 absolute top-60 inset-0  text-white md:ml-28 md:gap-5 md:top-60 md:inset-0 ">
-            <label htmlFor="" className=" md:text-5xl  ">
+            <label htmlFor="" className=" md:text-5xl  motion-preset-focus ">
               Crafting Chemistry
             </label>
-            <h2 className="text-6xl  mt-2 font-semibold md:text-8xl md:w-64 md:flex-wrap ">
+            <h2 className="text-6xl  mt-2 font-semibold md:text-8xl md:w-64 md:flex-wrap motion-preset-expand">
               Delivering <br /> Health
             </h2>
             <div className="mt-4 flex gap-5 md:absolute md:top-96 md:gap-10 md:left-96 md:hidden ">
@@ -61,7 +61,7 @@
                 </p>
               </div>
             </div>
-            <p className=" text-zinc-300 w-[20rem] mt-4  md:mt-10 md:text-2xl md:font-semibold md:w-[40rem] ">
+            <p className=" text-zinc-300 w-[20rem] mt-4  md:mt-10 md:text-2xl md:font-semibold md:w-[40rem] motion-preset-expand">
               Innovating sustainable solutions for a healthier tomorrow through
               excellence in chemical and pharmaceutical manufacturing
             </p>
@@ -108,7 +108,7 @@
                   <img src={arrow} alt="arrow" />
                 </div>
               </div>
-              <div className=" justify-right gap-5 md:ml-16 text-zinc-900 md:mt-10 hidden md:flex">
+              <div className=" justify-right gap-5 md:ml-28 text-zinc-900 md:mt-10 hidden md:flex">
                 <div className="w-52 text-center gap-6">
                   <label htmlFor="" className="text-4xl">
                     615
@@ -138,7 +138,7 @@
           {/* other detail section  */}
         </div>
 
-        <div className="w-[80vw] overflow-x-scroll flex mt-[25rem] gap-5 md:gap-5 ml-10 md:mt-10  md:max-h-max  md:justify-center md:mt:0 md:text-slate-100 md:w-fit">
+        <div className="w-[80vw] overflow-x-scroll flex mt-[25rem] gap-5 md:gap-5 ml-0 md:mt-10  md:max-h-max  md:justify-center md:mt:0 md:text-slate-100 md:w-full">
           <div
             className="snap-start  w-[20rem] h-[15rem] bg-cover bg-center bg rounded-xl flex items-end p-5 md:w-[20.5rem] md:h-[18rem]  md:bg:cover md:bg-center "
             style={{ background: `url(${service1}` }}
@@ -149,7 +149,9 @@
             className="snap-start w-[20rem] h-[15rem] bg-cover bg-center bg rounded-xl flex items-end p-5 md:w-[20.5rem] md:h-[18rem]  md:bg:cover md:bg-center "
             style={{ background: `url(${service2}` }}
           >
-            <p className="text-sm md:text-lg ">Pharma Formulation Development</p>
+            <p className="text-sm md:text-lg ">
+              Pharma Formulation Development
+            </p>
           </div>
           <div
             className="snap-start w-[20rem] h-[15rem] bg-cover bg-center bg rounded-xl flex items-end p-5 md:w-[20.5rem] md:h-[18rem]  md:bg:cover md:bg-center "
@@ -184,8 +186,8 @@
                   Advance technology
                 </label>
                 <p className="text-xs md:w-[20rem] md:text-base">
-                  Utilizing state-of-the-art equipment for accurate and efficient
-                  production
+                  Utilizing state-of-the-art equipment for accurate and
+                  efficient production
                 </p>
               </div>
               <div className="w-[32vh] md:w-[full]">
@@ -193,8 +195,8 @@
                   Advance technology
                 </label>
                 <p className="text-xs md:w-[20rem] md:text-base">
-                  Utilizing state-of-the-art equipment for accurate and efficient
-                  production
+                  Utilizing state-of-the-art equipment for accurate and
+                  efficient production
                 </p>
               </div>
               <div className="w-[32vh] md:w-[full]   ">
@@ -202,8 +204,8 @@
                   Advance technology
                 </label>
                 <p className="text-xs md:w-[20rem] md:text-base">
-                  Utilizing state-of-the-art equipment for accurate and efficient
-                  production
+                  Utilizing state-of-the-art equipment for accurate and
+                  efficient production
                 </p>
               </div>
             </div>
@@ -376,8 +378,8 @@
                 Precision Manufacturing
               </label>
               <p className="text-sm w-fit  ">
-                Leveraging advanced technologies to achieve unmatched accuracy in
-                every product we create.Leveraging advanced technologies to
+                Leveraging advanced technologies to achieve unmatched accuracy
+                in every product we create.Leveraging advanced technologies to
                 achieve unmatched accuracy in every product we create
               </p>
             </div>
@@ -389,8 +391,8 @@
                 Precision Manufacturing
               </label>
               <p className="text-sm w-fit  ">
-                Leveraging advanced technologies to achieve unmatched accuracy in
-                every product we create.Leveraging advanced technologies to
+                Leveraging advanced technologies to achieve unmatched accuracy
+                in every product we create.Leveraging advanced technologies to
                 achieve unmatched accuracy in every product we create
               </p>
             </div>
@@ -402,8 +404,8 @@
                 Precision Manufacturing
               </label>
               <p className="text-sm w-fit  ">
-                Leveraging advanced technologies to achieve unmatched accuracy in
-                every product we create.Leveraging advanced technologies to
+                Leveraging advanced technologies to achieve unmatched accuracy
+                in every product we create.Leveraging advanced technologies to
                 achieve unmatched accuracy in every product we create
               </p>
             </div>
@@ -415,8 +417,8 @@
                 Precision Manufacturing
               </label>
               <p className="text-sm w-fit  ">
-                Leveraging advanced technologies to achieve unmatched accuracy in
-                every product we create.Leveraging advanced technologies to
+                Leveraging advanced technologies to achieve unmatched accuracy
+                in every product we create.Leveraging advanced technologies to
                 achieve unmatched accuracy in every product we create
               </p>
             </div>
@@ -428,8 +430,8 @@
                 Precision Manufacturing
               </label>
               <p className="text-sm w-fit  ">
-                Leveraging advanced technologies to achieve unmatched accuracy in
-                every product we create.Leveraging advanced technologies to
+                Leveraging advanced technologies to achieve unmatched accuracy
+                in every product we create.Leveraging advanced technologies to
                 achieve unmatched accuracy in every product we create
               </p>
             </div>
@@ -441,8 +443,8 @@
                 Precision Manufacturing
               </label>
               <p className="text-sm w-fit  ">
-                Leveraging advanced technologies to achieve unmatched accuracy in
-                every product we create.Leveraging advanced technologies to
+                Leveraging advanced technologies to achieve unmatched accuracy
+                in every product we create.Leveraging advanced technologies to
                 achieve unmatched accuracy in every product we create
               </p>
             </div>
@@ -585,7 +587,7 @@
             </div>
           </div>
         </div>
-        <Footer/>
+        <Footer />
       </div>
     );
   };

@@ -1,26 +1,26 @@
 import React from "react";
 import banner from "../../assets/login_banner.png";
 import google from "../../assets/Google.png";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { supabase } from "../../supabaseClient";
 
 const Login = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleLogin = async () => {
-    const {
-      data: { user },
-      error,
-    } = await supabase.auth.signInWithPassword({
-      email,
-      password,
+    const { data, error } = await supabase.auth.signInWithPassword({
+      email: email,
+      password: password,
     });
+
     if (error) {
       console.error("Login error:", error.message);
-    } else {
-      console.log("Login successful:", user);
+    } else if (data?.user) {
+      console.log("Login successful:", data.user);
+      navigate("/");
     }
   };
 
@@ -46,9 +46,11 @@ const Login = () => {
               type="email"
               id="email"
               name="email"
+              value={email}
               required
               className=" w-[30rem] border border-gray-300 rounded-3xl px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
               placeholder="UserName or email"
+              autoComplete="email"
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
@@ -57,9 +59,11 @@ const Login = () => {
               type="password"
               id="password"
               name="password"
+              value={password}
               required
               className="w-[30rem] border border-gray-300 rounded-3xl px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
               placeholder="password"
+              autoComplete="current-password"
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>

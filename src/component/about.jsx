@@ -53,7 +53,7 @@ const About  = () => {
 
         <div className="text-white m-auto self-center ">
           <label className="text-[2rem] font-medium ">About</label>
-          <p className="text-xs w-inherit">
+          <p className="text-xs w-inherit md:text-lg md:w-[30rem] md:text-zinc-200">
             Dive into our curated collection of articles, tips, and stories
             designed to inform, inspire, and keep you ahead in every aspect of
             life.
@@ -65,13 +65,13 @@ const About  = () => {
           <img
             src={banner}
             alt=""
-            className="w-[20rem] h-[20rem] hidden md:flex md:h-[28rem] md:w-[28rem] md:rounded-2xl"
+            className="w-[20rem] h-[20rem] hidden md:flex md:h-[26rem] md:w-[28rem]  md:rounded-2xl md:bg-cover md:bg-center"
           />
           <div className="md:space-y-10">
             <h1 className="text-4xl font-semibold md:text-[3rem] ">
               Our Mission
             </h1>
-            <p className="flex md:text-[1.3rem] md:w-[36rem]">
+            <p className="flex md:text-[1.3rem] md:w-[36rem] ">
               To be the preferred partner for health manufacturing, recognized
               globally for quality, innovation, and trust.. I specialize in
               crafting unique visual identities and compelling brand stories. To
@@ -112,7 +112,6 @@ const About  = () => {
           </div>
         </div>
       </div>
-
       {/* our vision  */}
 
       <div className="w-full h-fit p-5 ">

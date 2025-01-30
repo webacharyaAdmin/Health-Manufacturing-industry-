@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       height: {
-        'banner': '600px', // Custom height for the banner image
+        banner: "600px", // Custom height for the banner image
       },
     },
     screens: {
@@ -14,7 +14,6 @@ export default {
       xl: "1280px",
       "2xl": "1536px",
     },
-  
   },
-  plugins: [],
+  plugins: [require("tailwindcss-motion")],
 };
