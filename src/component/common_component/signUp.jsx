@@ -6,7 +6,7 @@ import { useState } from "react";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [password , setPassword] = useState("");
 
   const handleSignUp = async () => {
     const { user, error } = await supabase.auth.signUp({
