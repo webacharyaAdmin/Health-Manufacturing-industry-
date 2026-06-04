@@ -4,7 +4,7 @@ import Services from "./component/services.jsx";
 import Blog from "./component/Blog.jsx";
 import Contact from "./component/contact.jsx";
 import About from "./component/about.jsx";
-// import Products from './component/products.jsx' 
+import Products from './component/products.jsx' 
 import Login from  './component/common_component/Login.jsx'
 import Signup from "./component/common_component/signUp.jsx";
 import Product from './component/products.jsx'
